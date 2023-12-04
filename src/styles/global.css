@@ -5,14 +5,19 @@ html {
 
 body {
   margin: 0 auto;
+  padding: 0;
   width: 100%;
-  max-width: 80ch;
-  padding: 1rem;
   line-height: 1.5;
 }
 
 * {
   box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
@@ -30,9 +35,9 @@ h1 {
 
 .hamburger .line {
   display: block;
-  width: 40px;
+  width: 30px;
   height: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   background-color: #ff9776;
 }
 

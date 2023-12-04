@@ -1,11 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import Container from '../components/Container.astro';
 import Greeting from '../components/Greeting.jsx';
 
 const pageTitle = "Página de inicio";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<h2>Mi impresionante subtítulo del blog</h2>
-	<Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+	<Section>
+		<Container>
+			<h2>Mi impresionante subtítulo del blog</h2>
+			<Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+		</Container>
+	<Section />
 </BaseLayout>

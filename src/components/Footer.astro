@@ -1,19 +1,27 @@
 ---
+import Container from './Container.astro';
 import Social from './Social.astro';
 ---
 
 <style>
     footer {
+      margin-top: 2rem;
+      padding: 1rem 0;
+      border-top: 1px solid #dadada;
+    }
+    .footer-container {
       display: flex;
       gap: 1rem;
-      margin-top: 2rem;
-      padding-top: 1rem;
-      border-top: 1px solid #dadada;
+      justify-content: center;
     }
 </style>
 
 <footer>
-  <Social platform="twitter" username="astrodobuild" />
-  <Social platform="facebook" username="Conrado Pardo" />
-  <Social platform="instagram" username="conrado_pardo" />
+  <Container>
+    <div class="footer-container">
+      <Social platform="twitter" username="astrodobuild" />
+      <Social platform="facebook" username="Conrado Pardo" />
+      <Social platform="instagram" username="conrado_pardo" />
+    </div>
+  </Container>
 </footer>

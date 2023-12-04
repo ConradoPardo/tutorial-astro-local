@@ -2,20 +2,28 @@
 import Hamburger from './Hamburger.astro';
 import Navigation from './Navigation.astro';
 import ThemeIcon from './ThemeIcon.astro';
+import Container from './Container.astro';
 ---
 
 <style>
     header {
         margin-bottom: 2rem;
-        padding-bottom: 1rem;
+        padding: 1rem 0;
         border-bottom: 1px solid #dadada;
+    }
+
+    nav {
+        position: relative;
+        padding: 0 1rem;
     }
 </style>
 
 <header>
-    <nav>
-        <Hamburger />
-        <ThemeIcon />
-        <Navigation />
-    </nav>
+    <Container>
+        <nav>
+            <Hamburger />
+            <Navigation />
+            <ThemeIcon />
+        </nav>
+    </Container>
 </header>
