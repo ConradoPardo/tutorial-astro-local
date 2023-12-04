@@ -1,15 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
-const allPosts = await Astro.glob('../pages/posts/*.md');
 
 const pageTitle = "Mi blog de Astro aprendizaje";
+
+const allPosts = await Astro.glob("../pages/posts/*.md");
+// const allPosts = await getCollection("posts");
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<h2>Mi impresionante subtítulo del blog</h2>
-
+	<p>Aquí es donde voy a publicar sobre mi viaje de aprendizaje con Astro.</p>
 	<ul>
-		{allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+		{
+		allPosts.map((post) => (
+			<BlogPost url={post.url} title={post.frontmatter.title} />
+			// <BlogPost url={`/posts/${post.slug}/`} title={post.data.title} />
+		))
+		}
 	</ul>
 </BaseLayout>
