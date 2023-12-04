@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 
-title: Mi primera publicación en el blog
+title: Prueba Mi primera publicación en el blog
 author: Conrado Pardo
 pubDate: 2022-07-01
 description: Este es la primera publicación de mi nuevo blog Astro.
